@@ -1,0 +1,40 @@
+# Edit config files
+alias edalias='nano .bash_aliases'
+alias edi3='nano ${i3config}'
+
+# Commandline shortcuts
+alias refresh='exec bash'
+alias home='cd ~/'
+alias cls='clear'
+alias editrc='sudo nano .bashrc'
+alias del='rm'
+alias sdel='sudo rm -i'
+alias sdel='sudo rm -i'
+alias rd='rmdir -rf'
+alias srd='sudo rm -r'
+alias md='mkdir'
+alias smd='sudo mkdir'
+
+# Application management
+alias install='sudo apt -y install'
+alias remove='sudo apt remove'
+alias purge='sudo apt purge'
+alias autoremove='sudo apt autoremove'
+alias update='sudo apt update'
+alias snapi='sudo snap install'
+
+# git
+alias clone='git clone'
+alias addall='git add .'
+alias commit='git commit -m'
+alias push='git push'
+publishit(){
+    addall &&
+    read -p 'comit message ' msg 
+    commit &&
+    push
+}
+
+# Vars
+i3config='.config/i3/config'
+
